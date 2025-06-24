@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAT - Supervisor - Tablero</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/colores.css">
+    <link rel="stylesheet" href="../../css/principal.css">
+    <link rel="stylesheet" href="../../css/componentes.css">
+</head>
+<body>
+<div class="layout-principal">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-logo">
+            <h2><i class="fas fa-user-tie"></i> SAT Supervisor</h2>
+        </div>
+        <nav>
+            <ul class="sidebar-nav">
+                <li><a href="#" class="activo"><i class="fas fa-tachometer-alt"></i> Tablero</a></li>
+                <li><a href="asignacion-sectoristas.html"><i class="fas fa-users"></i> Asignar Sectoristas</a></li>
+                <li><a href="monitoreo-tiempo-real.html"><i class="fas fa-chart-line"></i> Monitoreo en Vivo</a></li>
+                <li><a href="campanas-masivas.html"><i class="fas fa-bullhorn"></i> Campañas Masivas</a></li>
+                <li><a href="gestion-carteras.html"><i class="fas fa-folder-open"></i> Gestión de Carteras</a></li>
+                <li><a href="../../index.html"><i class="fas fa-home"></i> Volver al Inicio</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="contenido-principal">
+        <div class="encabezado">
+            <h1>Tablero de Supervisor</h1>
+            <p>Monitoreo y gestión de operaciones de cobranza</p>
+        </div>
+
+        <!-- Métricas principales -->
+        <div class="resumen-estadisticas">
+            <div class="tarjeta stat-card verde">
+                <div class="stat-numero">24</div>
+                <div>Sectoristas Activos</div>
+                <small>de 30 disponibles</small>
+            </div>
+            <div class="tarjeta stat-card">
+                <div class="stat-numero">1,247</div>
+                <div>Llamadas Hoy</div>
+                <small><i class="fas fa-arrow-up text-green"></i> +15% vs ayer</small>
+            </div>
+            <div class="tarjeta stat-card amarillo">
+                <div class="stat-numero">89</div>
+                <div>Emails Pendientes</div>
+                <small>requieren atención</small>
+            </div>
+            <div class="tarjeta stat-card">
+                <div class="stat-numero">156</div>
+                <div>Chats Atendidos</div>
+                <small>tiempo promedio: 4.2 min</small>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+
+            <!-- Campañas Activas -->
+            <div class="tarjeta">
+                <div class="mapeo-header">
+                    <h3><i class="fas fa-play-circle"></i> Campañas Activas</h3>
+                    <span class="badge verde">5 en ejecución</span>
+                </div>
+
+                <div style="margin-top: 1rem;">
+                    <div class="mapeo-fila-universal" style="grid-template-columns: 1fr auto auto;">
+                        <div>
+                            <div class="columna-nombre">Cobranza MEPECOS - Enero</div>
+                            <div class="columna-ejemplo">Franco Mendoza | 200k registros</div>
+                        </div>
+                        <span class="badge verde">Activa</span>
+                        <button class="btn btn-secundario btn-sm">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                    </div>
+
+                    <div class="mapeo-fila-universal" style="grid-template-columns: 1fr auto auto;">
+                        <div>
+                            <div class="columna-nombre">Papeletas Vencidas</div>
+                            <div class="columna-ejemplo">Angélica Torres | 15k registros</div>
+                        </div>
+                        <span class="badge verde">Activa</span>
+                        <button class="btn btn-secundario btn-sm">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                    </div>
+
+                    <div class="mapeo-fila-universal" style="grid-template-columns: 1fr auto auto;">
+                        <div>
+                            <div class="columna-nombre">PRICOS - Seguimiento</div>
+                            <div class="columna-ejemplo">Ortega/Pantoja | 10k registros</div>
+                        </div>
+                        <span class="badge amarillo">Pausada</span>
+                        <button class="btn btn-secundario btn-sm">
+                            <i class="fas fa-cog"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href="asignacion-sectoristas.html" class="btn btn-primario">
+                        <i class="fas fa-plus"></i> Gestionar Campañas
+                    </a>
+                </div>
+            </div>
+
+            <!-- Estado de Sectoristas -->
+            <div class="tarjeta">
+                <div class="mapeo-header">
+                    <h3><i class="fas fa-headset"></i> Estado de Sectoristas</h3>
+                    <span class="badge">24/30 conectados</span>
+                </div>
+
+                <div style="margin-top: 1rem;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1rem;">
+                        <div class="resumen-estado completo">
+                            <i class="fas fa-circle" style="color: var(--verde-exito);"></i>
+                            <span>18 Disponibles</span>
+                        </div>
+                        <div class="resumen-estado" style="color: var(--amarillo-alerta);">
+                            <i class="fas fa-circle" style="color: var(--amarillo-alerta);"></i>
+                            <span>6 Ocupados</span>
+                        </div>
+                        <div class="resumen-estado incompleto">
+                            <i class="fas fa-circle" style="color: var(--rojo-error);"></i>
+                            <span>6 Desconectados</span>
+                        </div>
+                    </div>
+
+                    <div class="mapeo-fila-universal" style="grid-template-columns: 1fr auto;">
+                        <div>
+                            <div class="columna-nombre">Carlos Mendoza</div>
+                            <div class="columna-ejemplo">Llamadas MEPECOS | 12 atenciones hoy</div>
+                        </div>
+                        <span class="badge verde">Disponible</span>
+                    </div>
+
+                    <div class="mapeo-fila-universal" style="grid-template-columns: 1fr auto;">
+                        <div>
+                            <div class="columna-nombre">Lucia Vargas</div>
+                            <div class="columna-ejemplo">En llamada | 08:43 min</div>
+                        </div>
+                        <span class="badge amarillo">Ocupada</span>
+                    </div>
+
+                    <div class="mapeo-fila-universal" style="grid-template-columns: 1fr auto;">
+                        <div>
+                            <div class="columna-nombre">Miguel Torres</div>
+                            <div class="columna-ejemplo">Chat Support | 3 conversaciones</div>
+                        </div>
+                        <span class="badge verde">Disponible</span>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href="monitoreo-tiempo-real.html" class="btn btn-primario">
+                        <i class="fas fa-eye"></i> Monitoreo Detallado
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alertas y Notificaciones -->
+        <div class="tarjeta">
+            <h3><i class="fas fa-bell"></i> Alertas y Notificaciones</h3>
+
+            <div style="margin-top: 1rem;">
+                <div class="mensaje-temporal" style="background-color: var(--amarillo-alerta); color: white;">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span><strong>Cola de espera alta:</strong> 12 llamadas esperando en MEPECOS (tiempo promedio: 4.2 min)</span>
+                </div>
+
+                <div class="mensaje-temporal info">
+                    <i class="fas fa-info-circle"></i>
+                    <span><strong>Sistema actualizado:</strong> Nueva funcionalidad de chat interno disponible</span>
+                </div>
+
+                <div class="mapeo-fila-universal" style="grid-template-columns: auto 1fr auto auto;">
+                    <i class="fas fa-clock" style="color: var(--amarillo-alerta);"></i>
+                    <div>
+                        <div class="columna-nombre">Campaña SMS programada</div>
+                        <div class="columna-ejemplo">15:30 - Recordatorio de pago (1,500 contactos)</div>
+                    </div>
+                    <span class="badge">Programada</span>
+                    <button class="btn btn-secundario btn-sm">
+                        <i class="fas fa-edit"></i>
+                    </button>
+                </div>
+
+                <div class="mapeo-fila-universal" style="grid-template-columns: auto 1fr auto auto;">
+                    <i class="fas fa-user-clock" style="color: var(--rojo-error);"></i>
+                    <div>
+                        <div class="columna-nombre">Sectorista en pausa extendida</div>
+                        <div class="columna-ejemplo">Ana García - 25 minutos sin actividad</div>
+                    </div>
+                    <span class="badge rojo">Atención</span>
+                    <button class="btn btn-secundario btn-sm">
+                        <i class="fas fa-comments"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Acciones Rápidas -->
+        <div class="tarjeta">
+            <h3><i class="fas fa-bolt"></i> Acciones Rápidas</h3>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <a href="campanas-masivas.html" class="btn btn-primario" style="height: auto; padding: 1rem;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-paper-plane" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <div>Envío Masivo</div>
+                        <small style="opacity: 0.8;">SMS, Email, WhatsApp</small>
+                    </div>
+                </a>
+
+                <a href="asignacion-sectoristas.html" class="btn btn-secundario" style="height: auto; padding: 1rem;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-user-plus" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <div>Asignar Equipo</div>
+                        <small style="opacity: 0.8;">A campañas activas</small>
+                    </div>
+                </a>
+
+                <a href="gestion-carteras.html" class="btn btn-secundario" style="height: auto; padding: 1rem;">
+                    <div style="text-align: center;">
+                        <i class="fas fa-upload" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <div>Cargar Cartera</div>
+                        <small style="opacity: 0.8;">Nuevos contactos</small>
+                    </div>
+                </a>
+
+                <button class="btn btn-secundario" style="height: auto; padding: 1rem;" onclick="mostrarChatGeneral()">
+                    <div style="text-align: center;">
+                        <i class="fas fa-comments" style="font-size: 1.5rem; margin-bottom: 0.5rem; display: block;"></i>
+                        <div>Chat General</div>
+                        <small style="opacity: 0.8;">Con todos los sectoristas</small>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Chat interno modal (oculto por defecto) -->
+        <div id="chatModal" class="modal" style="display: none;">
+            <div class="modal-contenido" style="max-width: 500px;">
+                <div class="modal-header">
+                    <h4><i class="fas fa-comments"></i> Chat General - Supervisor</h4>
+                    <button class="btn-cerrar" onclick="cerrarChatGeneral()">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div style="height: 300px; border: 1px solid var(--borde); border-radius: 6px; padding: 1rem; overflow-y: auto; background-color: var(--gris-claro); margin-bottom: 1rem;">
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Supervisor:</strong> Buenos días equipo, recuerden revisar las actualizaciones de contacto en MEPECOS
+                            <small style="display: block; color: var(--gris-medio);">09:15</small>
+                        </div>
+                        <div style="margin-bottom: 1rem; text-align: right;">
+                            <div style="background-color: var(--sat-azul-principal); color: white; padding: 0.5rem; border-radius: 6px; display: inline-block;">
+                                <strong>Carlos M:</strong> Entendido, ¿hay algún cambio en las prioridades?
+                                <small style="display: block; opacity: 0.8;">09:16</small>
+                            </div>
+                        </div>
+                        <div style="margin-bottom: 1rem;">
+                            <strong>Lucia V:</strong> Tengo una consulta compleja en línea 2, ¿me pueden apoyar?
+                            <small style="display: block; color: var(--gris-medio);">09:18</small>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 0.5rem;">
+                        <input type="text" class="campo" placeholder="Escribe tu mensaje..." style="flex: 1;">
+                        <button class="btn btn-primario">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+<script>
+    function mostrarChatGeneral() {
+        document.getElementById('chatModal').style.display = 'flex';
+    }
+
+    function cerrarChatGeneral() {
+        document.getElementById('chatModal').style.display = 'none';
+    }
+
+    // Cerrar modal al hacer clic fuera
+    document.getElementById('chatModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            cerrarChatGeneral();
+        }
+    });
+</script>
+
+</body>
+</html>
