@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAT - Sistema de Gestión</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/colores.css">
+  <link rel="stylesheet" href="css/principal.css">
+  <link rel="stylesheet" href="css/componentes.css">
+</head>
+<body>
+<div class="layout-principal">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <h2><i class="fas fa-building"></i> SAT Lima</h2>
+    </div>
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="#" class="activo"><i class="fas fa-tachometer-alt"></i> Tablero</a></li>
+        <li><a href="paginas/administrador/wizard-campanas.html"><i class="fas fa-plus-circle"></i> Nueva Campaña</a></li>
+        <li><a href="#"><i class="fas fa-list"></i> Campañas Activas</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Sectoristas</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="contenido-principal">
+    <div class="encabezado">
+      <h1>Panel de Administrador</h1>
+      <p>Gestión de campañas y configuración del sistema</p>
+    </div>
+
+    <div class="tarjeta">
+      <h3>Seleccionar Rol para Mockups</h3>
+      <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+        <a href="paginas/administrador/wizard-campanas.html" class="btn btn-primario">
+          <i class="fas fa-user-cog"></i> Administrador
+        </a>
+        <a href="paginas/supervisor/tablero.html" class="btn btn-secundario">
+          <i class="fas fa-user-tie"></i> Supervisor
+        </a>
+        <a href="paginas/sectorista/tablero.html" class="btn btn-secundario">
+          <i class="fas fa-headset"></i> Sectorista
+        </a>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

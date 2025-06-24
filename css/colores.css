@@ -1,0 +1,23 @@
+:root {
+    /* Colores principales SAT */
+    --sat-azul-principal: #1E3A8A;
+    --sat-azul-claro: #3B82F6;
+    --sat-azul-hover: #1E40AF;
+    --sat-azul-suave: #EFF6FF;
+
+    /* Grises y neutros */
+    --gris-claro: #F8FAFC;
+    --gris-medio: #64748B;
+    --gris-oscuro: #334155;
+    --blanco: #FFFFFF;
+    --borde: #E2E8F0;
+
+    /* Estados */
+    --verde-exito: #10B981;
+    --rojo-error: #EF4444;
+    --amarillo-alerta: #F59E0B;
+
+    /* Sombras */
+    --sombra-suave: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    --sombra-media: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}

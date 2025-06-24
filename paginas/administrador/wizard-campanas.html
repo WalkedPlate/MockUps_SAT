@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAT - Crear Campaña</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="../../css/colores.css">
+  <link rel="stylesheet" href="../../css/principal.css">
+  <link rel="stylesheet" href="../../css/componentes.css">
+</head>
+<body>
+<div class="layout-principal">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <h2><i class="fas fa-building"></i> SAT Lima</h2>
+    </div>
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="../../index.html"><i class="fas fa-tachometer-alt"></i> Tablero</a></li>
+        <li><a href="#" class="activo"><i class="fas fa-plus-circle"></i> Nueva Campaña</a></li>
+        <li><a href="#"><i class="fas fa-list"></i> Campañas Activas</a></li>
+        <li><a href="#"><i class="fas fa-users"></i> Sectoristas</a></li>
+        <li><a href="#"><i class="fas fa-cog"></i> Configuración</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="contenido-principal">
+    <div class="encabezado">
+      <h1>Crear Nueva Campaña</h1>
+      <p>Configure una nueva campaña de gestión de cobranza</p>
+    </div>
+
+    <div class="wizard-contenedor">
+      <!-- Indicador de pasos -->
+      <div class="wizard-pasos">
+        <div class="paso activo">
+          <div class="numero-paso">1</div>
+          <span>Información General</span>
+        </div>
+        <div class="paso">
+          <div class="numero-paso">2</div>
+          <span>Fechas y Horarios</span>
+        </div>
+        <div class="paso">
+          <div class="numero-paso">3</div>
+          <span>Asignar Sectoristas</span>
+        </div>
+        <div class="paso">
+          <div class="numero-paso">4</div>
+          <span>Carga de Datos</span>
+        </div>
+      </div>
+
+      <!-- Contenido del paso actual -->
+      <div class="tarjeta">
+        <div id="paso-1" class="paso-contenido">
+          <h3 class="mb-3">Información General de la Campaña</h3>
+
+          <div class="grupo-form">
+            <label class="etiqueta">Nombre de la Campaña</label>
+            <input type="text" class="campo" placeholder="Ej: Cobranza Tributaria Febrero 2025">
+          </div>
+
+          <div class="grupo-form">
+            <label class="etiqueta">Tipo de Campaña</label>
+            <select class="campo select">
+              <option value="">Seleccionar tipo...</option>
+              <option value="cobranza-telefonica">Cobranza Telefónica</option>
+              <option value="gestion-cobranza">Gestión de Cobranza</option>
+              <option value="seguimiento-deudas">Seguimiento de Deudas</option>
+              <option value="atencion-especializada">Atención Especializada</option>
+            </select>
+          </div>
+
+          <div class="grupo-form">
+            <label class="etiqueta">Área de Trabajo</label>
+            <select class="campo select">
+              <option value="">Seleccionar área...</option>
+              <option value="tributaria-mepecos">Tributaria - MEPECOS</option>
+              <option value="tributaria-pricos">Tributaria - PRICOS</option>
+              <option value="no-tributaria">No Tributaria</option>
+              <option value="coactiva">Coactiva</option>
+            </select>
+          </div>
+
+          <div class="grupo-form">
+            <label class="etiqueta">Descripción</label>
+            <textarea class="campo" rows="3" placeholder="Descripción detallada de la campaña..."></textarea>
+          </div>
+
+          <div style="background-color: var(--sat-azul-suave); padding: 1rem; border-radius: 6px; margin-top: 1.5rem;">
+            <h4 style="color: var(--sat-azul-principal); margin-bottom: 0.5rem;">
+              <i class="fas fa-question-circle"></i> Puntos para Discusión
+            </h4>
+            <ul style="color: var(--gris-oscuro); margin-left: 1rem;">
+              <li>¿El Admin solo configura campañas operativas o también masivas?</li>
+              <li>¿Esta campaña creada por el Admin es la general?</li>
+              <li>¿En qué momento se dividen para MEPECOS, PRICOS o COACTIVA?</li>
+              <li>¿Quién lo divide, un Admin o un Supervisor?</li>
+
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Navegación -->
+        <div class="wizard-navegacion">
+
+          <button class="btn btn-primario" id="btn-siguiente">
+            Siguiente <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="../../js/wizard.js"></script>
+</body>
+</html>
